@@ -125,6 +125,20 @@ details:active{
    
   margin: 40px;
 }
+
+#feedbackForm > form > div:nth-child(1){
+
+  margin-left: 140px;
+}
+
+#feedbackForm > form > div:nth-child(6){
+
+  margin-left: 140px;
+}
+
+
+
+
 .formfeedbackForm{
   margin-left: 700px;
 }
