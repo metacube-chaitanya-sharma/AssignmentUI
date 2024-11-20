@@ -1,191 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="parkingStyle.css">
 </head>
+
 <body>
-    
-     <div class="topnav">
+
+
+    <nav class="topnav">
+
         <img src="data:image/jpeg;base64,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"
             alt="" srcset="">
-        <a href="#employee"> employee</a>
-        <a href="#vehicle">vehicle</a>
-        <a href="#feedback">feedback</a>
-        <a href="#pricing">pricing</a>
-     </div><br><br>
-     
-    
-     <section id = "employee">
 
-        <div class="employeeForm">
-
-            <form action="form-action">
-  
-              <label for="fname">Full Name : </label>
-              <input type="text" id = "fname" name = 'fname' placeholder="enter your full name"><br><br>
-
-              
-              <label for="gender">Gender : </label> <br>
-              <label>
-                <input type = "radio"  id = "male" name= "option" value="male">Male 
-              </label>
-              <label >
-                <input type="radio" id = "female" name = "option" value = "female">Female
-              </label><br><br>
-
-            
-  
-              <label for="email">Email : </label>
-              <input type="email" id = "email" placeholder="enter your email" required><br><br>
-  
-              <label for="password">Password :</label>
-              <input type="password" id = "password" placeholder="enter your password"><br><br>
-  
-              <label for="confirmPassword">Confirm Password : </label>
-              <input type="password" id = "confirmPassword" placeholder="enter your confirm password"><br><br>
-  
-              <label for="number">Contact Number : </label>
-              <input type="tel" id = "number" pattern="[0-9]{10}" placeholder="enter 10-digit mobile number"><br><br>
-              
-              <input type="submit" name="submit" id="submit"><br><br>
-            </form>
-  
-      </div>
+        <a href="#employee"> Add Employee</a>
+        <a href="#vehicle">Add Vehicle</a>
+        <a href="#feedback">Add Feedback</a>
+        <a href="#pricing">Add Pricing</a>
+    </nav>
 
 
-     </section>
-     <br><br><br><br><br>
-     <hr>
-    
-   
-     <section id="vehicle">
-        <br><br><br><br>
+    <section id="employee">
 
-         <div class = "vehicleForm">
+        <details>
+            <summary>Employee Details</summary>
+
+
+            <div class="employeeForm">
+
+                <form action="form-action">
+
+                    <div>
+                        <label for="fname">Full Name </label>
+                        <input type="text" id="fname" name='fname' placeholder="enter your full name">
+                    </div>
+
+                    <div>
+                        <label for="gender">Gender </label>
+
+                        <label>Male</label>
+                        <input type="radio" id="male" name="option" value="male">
+
+                        <label>Female</label>
+                        <input type="radio" id="female" name="option" value="female">
+
+
+
+                    </div>
+
+
+                    <div>
+                        <label for="email">Email </label>
+                        <input type="email" id="email" placeholder="enter your email" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="enter your password">
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword">Confirm Password </label>
+                        <input type="password" id="confirmPassword" placeholder="enter your confirm password">
+                    </div>
+
+                    <div>
+                        <label for="number">Contact Number </label>
+                        <input type="tel" id="number" pattern="[0-9]{10}" placeholder="enter 10-digit mobile number">
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" id="submit">
+                    </div>
+                </form>
+
+            </div>
+
+        </details>
+
+
+    </section>
+
+
+
+
+    <section id="vehicle">
+
+        <details>
+
+            <summary>Vehicle Details</summary>
+
+            <div class="vehicleForm">
+                <form action="submit">
+
+                    <div>
+
+                        <label for="vehicleCompany">Vehicle Make (Company) </label>
+                        <input type="text" name="vehicleCompany" id="vehicleCompany"
+                            placeholder="enter the vehicle Company">
+                    </div>
+
+                    <div>
+                        <label for="vehicleModal">Vehicle Modal </label>
+                        <input type="text" id="vehicleModal" placeholder="enter Vehicle Modal">
+                    </div>
+                    <div>
+                        <label for="cars">Choose a type</label>
+
+                        <select name="cars" id="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="tata">Tata</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="vehicleNumber">Vehicle Number </label>
+                        <input type="text" id="vehicleNumber" placeholder="enter Vehicle Number">
+                    </div>
+                    <div>
+                        <label for="employeeId">employee Id </label>
+                        <input type="number" name="employeeId" id="employeeId" placeholder="enter the employee Id">
+                    </div>
+                    <div>
+                        <label for="identification">Identification </label>
+                        <input type="text" name="identification" id="identification"
+                            placeholder="enter your Identification">
+                    </div>
+                </form>
+
+            </div>
+        </details>
+    </section>
+    <br>
+
+
+
+    <section id="feedback">
+
+        <div id="feedbackForm">
+
+
+
             <form action="submit">
+                <div>
+                    <h1>Get in touch</h1>
+                </div>
 
-            <label for="vehicleCompany">Vehicle Make (Company) : </label>
-            <input type="text" name="vehicleCompany" id="vehicleCompany" placeholder="enter the vehicle Company"><br><br>
+                <div>
+                    <label for="name">Name </label>
+                    <input type="text" placeholder="Enter the Name">
+                </div>
 
+                <div>
+                    <label for="email">Email </label>
+                    <input type="email" placeholder="enter the email">
+                </div>
 
-            <label for="vehicleModal">Vehicle Modal : </label>
-            <input type="text" id = "vehicleModal" placeholder="enter Vehicle Modal"><br><br>
+                <div>
+                    <label for="subject">Subject </label>
+                    <input type="text" placeholder="enter the subject">
+                </div>
 
-            <label for="cars">Choose a type:</label>
+                <div>
+                    <label for="message">Message </label>
+                    <input type="text" width="50" height="500" placeholder="enter the message">
+                </div>
 
-            <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="tata">Tata</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-            </select><br><br>
-
-            <label for="vehicleNumber">Vehicle Number : </label>
-            <input type="text" id = "vehicleNumber" placeholder="enter Vehicle Number"><br><br>
-
-            <label for="employeeId">employee Id : </label>
-            <input type="number" name="employeeId" id="employeeId" placeholder="enter the employee Id"><br><br>
-
-            <label for="identification">Identification : </label>
-            <input type="text" name = "identification"  id = "identification" placeholder="enter your Identification of Vehicle"><br><br>
-            </form>
-            
-         </div>
-         <br><br><br><br><br>
-     </section>
-     <br>
-     <hr>
-     
-
-     <section id ="feedback" >
-        <br><br><br><br><br>
-         <div id = "feedbackForm">
-
-            <h1>Get in touch</h1>
-
-            <form action="submit">
-
-                <label for="name">Name : </label>
-                <input type="text" placeholder="Enter the Name"><br><br>
-
-                <label for="email">Email : </label>
-                <input type="email" placeholder="enter the email"><br><br>
-
-                <label for="subject">Subject : </label>
-                <input type="text" placeholder="enter the subject"><br><br>
-
-                <label for="message">Message : </label>
-                <input type="text"  width="50" height= "500" placeholder="enter the message"><br><br>
-
-                <input type="submit" value="Send Email">
+                <div>
+                    <input type="submit" value="Send Email">
+                </div>
             </form>
 
-         </div>
-
-         <br><br><br><br><br> 
-     </section>
-     <br>
-     <hr>
-     
-
-     <section id = "pricing">
-        <br><br><br><br><br>
-         
-         <div id="cycle">
-
-            <h1>Cycle</h1>
-
-            <h2>$100</h2>
-            <h3>/month</h3>
-
-            <p>$5 Daily</p>
-            <p>$100 Monthly</p>
-            <p>$500 Yearly</p>
-
-            <button type="button">PURCHASE NOW</button>
+        </div>
 
 
-         </div>
-         <br>
-
-         <div id="motorCycle">
-
-            <h1>Motor Cycle</h1>
-
-            <h2>$200</h2>
-            <h3>/month</h3>
-
-            <p>$10 Daily</p>
-            <p>$200 Monthly</p>
-            <p>$1000 Yearly</p>
-
-            <button type="button">PURCHASE NOW</button>
+    </section>
 
 
-         </div>
-         <br>
 
-         <div id="fourWheeler">
-
-            <h1>Four Wheeler</h1>
-
-            <h2>$500</h2>
-            <h3>/month</h3>
-
-            <p>$20 Daily</p>
-            <p>$500 Monthly</p>
-            <p>$3500 Yearly</p>
-
-            <button type="button">PURCHASE NOW</button>
+    <section id="pricing">
 
 
-         </div>
-         <br><br><br><br><br>
-     </section>
-     <br>
-     <hr>
-     
+        <div id="cards">
+            <div id="cycle">
+                <div>
+                    <h1>Cycle</h1>
+                </div>
+                <div class="money">
+                    <div>
+                        <h2>$100</h2>
+                    </div>
+                    <div>
+                        <h3>/month</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <p>$5 Daily</p>
+                    <p>$100 Monthly</p>
+                    <p>$500 Yearly</p>
+                </div>
+
+                <div>
+                    <button type="button" class="purchaseNow">PURCHASE NOW</button>
+                </div>
+
+
+            </div>
+
+
+            <div id="motorCycle">
+
+                <div>
+                    <h1>Motor Cycle</h1>
+                </div>
+
+                <div class="money">
+                    <div>
+                        <h2>$200</h2>
+                    </div>
+                    <div>
+                        <h3>/month</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <p>$10 Daily</p>
+                    <p>$200 Monthly</p>
+                    <p>$1000 Yearly</p>
+                </div>
+
+                <div>
+                    <button type="button" class="purchaseNow">PURCHASE NOW</button>
+                </div>
+
+
+            </div>
+
+
+            <div id="fourWheeler">
+                <div>
+                    <h1>Four Wheeler</h1>
+                </div>
+
+                <div class="money">
+                    <div>
+                        <h2>$500</h2>
+                    </div>
+                    <div>
+                        <h3>/month</h3>
+                    </div>
+                </div>
+                <div>
+                    <p>$20 Daily</p>
+                    <p>$500 Monthly</p>
+                    <p>$3500 Yearly</p>
+                </div>
+
+                <div>
+                    <button type="button" class="purchaseNow">PURCHASE NOW</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <hr>
+
 </body>
+
 </html>
