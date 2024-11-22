@@ -1,0 +1,459 @@
+body{
+    margin: 0px;
+    padding: 0px; 
+}
+
+.navMainBody{
+    background-image: url('../image/homebg.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    background-size: 100%;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.navLogo{
+    width: 200px;
+    margin-top: 13px;
+}
+
+.navItems{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+   
+}
+.navItems > div > a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+    font-family: "Roboto", serif;
+   font-weight: 500;
+   font-style: normal;
+    margin: 10px;
+}
+.navItems>div>a:hover{
+    color: black;
+    transition: 0.5s;
+}
+.socialMedia{
+    margin-top: 2px;
+}
+
+.socialMedia > i{
+ font-size: 20px;
+ color: white;
+ margin: 10px;
+
+}
+.socialMedia > i:hover{
+    color: black;
+    transition: 0.5s;
+}
+
+
+.navContent{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    height: 500px;
+}
+
+.navContentTitle{
+display: flex;
+width: 300px;
+flex-direction: column;
+
+}
+.navContentTitle > div > h1{
+    color:white; 
+    font-size: 40px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.navContentTitle > div > button:nth-child(1){
+  background-color: rgba(234, 68, 68, 0.92);
+  border:none; 
+  color: white;
+  padding: 15px 32px; 
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.navContentTitle > div > button:nth-child(2){
+
+    background-color: rgba(32, 32, 123, 0.68);
+    border: none;
+    color: white;
+    padding:15px 32px; 
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.navContentPhone1 > img{
+ width: 330px;
+}
+
+#feature{
+    display: flex;
+    flex-direction: column;
+}
+
+.featureHeading{
+    margin-top: 80px;
+    margin-left: 483px;
+    
+
+
+}
+.featureHeading>h2{
+    margin-bottom: 6px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 35px;
+    color: rgba(56, 56, 223, 0.774);
+}
+.featureHeading>p{
+    margin-top: 1px;
+    margin-left: 80px;
+    color: rgb(167, 165, 165);
+}
+
+.featureContent{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    display: flex;
+    width: 350px;
+   
+    
+}
+.fa-diamond{
+    font-size: 50px;
+    margin-top: 28px;
+    color: orangered;
+
+}
+
+.fa-stack-exchange{
+font-size: 50px;
+margin-top: 28px;
+color:orangered
+}
+
+.fa-wpforms{
+    font-size: 50px;
+    margin-top: 28px;
+    color:orangered
+
+}
+.card>div>h3{
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 8px;
+    margin-left: 12px;
+}
+
+.card>div>p{
+    color: rgb(86, 85, 85);
+    margin-top: 8px;
+    margin-left: 12px;
+    
+}
+
+.featureCards{
+    display:flex;
+    margin-top: 80px;
+  
+}
+
+.card1{
+   height: 400px;
+    margin-right: 0px;
+    margin-left: 80px;
+    margin-top: 46px;
+    z-index: -1;
+}
+
+.card2{
+    z-index: 10;
+    height: 580px;
+}
+.card3{
+    
+    height: 400px;
+    margin-top: 46px;
+    z-index: -1;
+    
+}
+
+.cardImage>img{
+    height: 500px;
+}
+
+
+.screenshot{
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshotHeading{
+
+    margin-top: 80px;
+    margin-left: 483px;
+}
+
+.screenshotHeading>h2{
+
+    margin-bottom: 6px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 38px;
+    color: rgba(56, 56, 223, 0.774);
+}
+
+.screenshotHeading>p{
+    margin-top: 1px;
+    margin-left: 45px;
+    color: rgb(167, 165, 165);
+}
+
+.screenshotScreen1{
+display: flex;
+justify-content: space-evenly;
+margin-top: 110px;
+
+}
+.screenshotImage>img{
+    height: 350px;
+}
+
+.screenshotContent{
+    width: 300px;
+    margin-top: 80px;
+}
+.screenshotContent>div>h3{
+
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.screenshotContent>div>h3{
+    color: rgb(86, 85, 85);
+}
+
+
+.screenshotScreen2{
+display: flex;
+justify-content: space-evenly;
+margin-top: 110px;
+}
+.screenshotScreen3{
+display: flex;
+justify-content: space-evenly;
+margin-top: 110px;
+}
+
+#reviews{
+
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.reviewHeading{
+
+    margin-top: 80px;
+    margin-left: 483px;
+}
+
+.reviewHeading>h3{
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(56, 56, 223, 0.774);
+    margin-bottom: 4px;
+    font-size: 25px;
+}
+
+.reviewHeading>p{
+    margin-top: 2px;
+    margin-left: 95px;
+    color: rgb(86, 85, 85);
+}
+
+.leftQuote{
+    font-size: 20px;
+    color: rgba(56, 56, 223, 0.774);
+}
+.rightQuote{
+    margin-top: 2px;
+    font-size: 20px;
+    margin-left: 320px;
+    color: rgba(56, 56, 223, 0.774);
+
+}
+
+.reviewContent1{
+
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 1px;
+
+}
+.reviewContent1>div{
+    width: 350px;
+}
+
+
+.reviewContent2{
+
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+}
+
+.reviewContent2>div{
+    width: 350px;
+}
+
+#downloadApp{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 120px;
+    background-image: url('../image/homebg.png');
+}
+
+.downloadAppContainerLeft{
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ width: 200px;
+ margin-top: 80px;
+}
+.downloadAppContainerLeft>div>h3{
+font-size: 25px;
+color: white;
+margin-bottom: 2px;
+
+}
+
+.downloadAppContainerLeft>div>p{
+font-size: 15px;
+color:white;
+width: 253px;
+margin-top: 0px;
+}
+
+.playstoreImage{
+    display: flex;
+}
+.playstoreImage>div{
+    margin-right: 12px;
+}
+.downloadAppContainerRight{
+    margin-top: 120px;
+    width: 400px;
+}
+.downloadAppContainerRight>img{
+    width:500px; 
+}
+
+.mainFooter{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(17, 18, 32, 0.728);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    
+    height: 50px;
+    
+}
+.footerLogo{
+    width: 200px;
+    margin-top: 13px;
+}
+
+.footerItems{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+   
+}
+.footerItems > div > a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    
+    font-family: "Roboto", serif;
+   font-weight: 500;
+   font-style: normal;
+    margin: 10px;
+}
+.footerItems>div>a:hover{
+    color: black;
+    transition: 0.5s;
+}
+.footerSocialMedia{
+    margin-top: 2px;
+}
+
+.footerSocialMedia > i{
+ font-size: 20px;
+ color: white;
+ margin: 10px;
+
+}
+.footerSocialMedia > i:hover{
+    color: black;
+    transition: 0.5s;
+}
+
+.mainFooter>div>img{
+    width: 850px;
+    margin-left: 200px;
+    margin-top: 40px;
+}
+
+.mainFooter>div>p{
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 550px;
+    color: lightgray;
+    margin-top: 30px;
+}
