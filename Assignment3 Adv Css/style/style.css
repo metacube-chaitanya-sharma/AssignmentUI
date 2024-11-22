@@ -149,6 +149,8 @@ flex-direction: column;
    
     
 }
+
+
 .fa-diamond{
     font-size: 50px;
     margin-top: 28px;
@@ -184,29 +186,23 @@ color:orangered
 }
 
 .featureCards{
-    display:flex;
-    margin-top: 80px;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    
 }
-
 .card1{
-   height: 400px;
-    margin-right: 0px;
-    margin-left: 80px;
-    margin-top: 46px;
-    z-index: -1;
+    height: 280px;
+    margin-right: -50px;
 }
-
 .card2{
+    height: 500px;
     z-index: 10;
-    height: 580px;
 }
 .card3{
-    
-    height: 400px;
-    margin-top: 46px;
-    z-index: -1;
-    
+    height: 280px;
+    margin-left: -50px;
 }
 
 .cardImage>img{
@@ -250,6 +246,38 @@ margin-top: 110px;
 .screenshotImage>img{
     height: 350px;
 }
+
+#screenshotImage1>p{
+    transform: rotate(90deg);
+    color: rgba(119, 136, 153, 0.781);
+    font-size: 110px;
+    position: absolute;
+    left: 23%;
+    z-index: -2;
+
+}
+
+#screenshotImage2>p{
+    transform: rotate(90deg);
+    color: rgba(119, 136, 153, 0.781);
+    font-size: 112px;
+    position: absolute;
+    left: 69%;
+    z-index: -2;
+    
+
+}
+#screenshotImage3>p{
+
+    transform: rotate(90deg);
+    color: rgba(119, 136, 153, 0.781);
+    font-size: 120px;
+    position: absolute;
+    left:25%;
+    z-index: -2; 
+}
+
+
 
 .screenshotContent{
     width: 300px;
