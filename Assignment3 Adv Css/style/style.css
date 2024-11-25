@@ -4,6 +4,7 @@ body {
     background-image: url('../image/bodybg.png');
 }
 
+/* navbar css */
 .navMainBody {
     background-image: url('../image/homebg.png');
     background-repeat: no-repeat;
@@ -119,6 +120,7 @@ body {
     width: 330px;
 }
 
+/* feature section css */
 #feature {
     display: flex;
     flex-direction: column;
@@ -222,6 +224,7 @@ body {
     height: 500px;
 }
 
+/* screenshot section css */
 
 .screenshot {
     display: flex;
@@ -310,18 +313,6 @@ body {
     color: rgb(86, 85, 85);
 }
 
-/* .circle{
-    display: flex; 
-    flex-direction: row;
-}
-.circle>div{
-
-    border: 1px dashed lightgray;
-    border-radius: 50%;
-    font-size: 20px;
-    margin:0px;
-    color: lightgray;
-} */
 
 .circle1 {
     display: flex;
@@ -387,6 +378,8 @@ body {
     justify-content: space-evenly;
     margin-top: 110px;
 }
+
+/* review section css */
 
 #reviews {
 
@@ -505,6 +498,8 @@ body {
 .downloadAppContainerRight>img {
     width: 500px;
 }
+
+/* Footer section css */
 
 .mainFooter {
     display: flex;
