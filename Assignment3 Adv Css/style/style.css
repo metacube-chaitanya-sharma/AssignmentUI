@@ -1,103 +1,110 @@
-body{
+body {
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
     background-image: url('../image/bodybg.png');
 }
 
-.navMainBody{
+.navMainBody {
     background-image: url('../image/homebg.png');
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     background-size: 100%;
-    
+
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-evenly;
 }
-.navLogo{
+
+.navLogo {
     width: 200px;
     margin-top: 13px;
 }
 
-.navItems{
+.navItems {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-   
+
 }
-.navItems > div > a{
+
+.navItems>div>a {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    
+
     font-family: "Roboto", serif;
-   font-weight: 500;
-   font-style: normal;
+    font-weight: 500;
+    font-style: normal;
     margin: 10px;
 }
-.navItems>div>a:hover{
+
+.navItems>div>a:hover {
     color: black;
     transition: 0.5s;
 }
-.socialMedia{
+
+.socialMedia {
     margin-top: 2px;
 }
 
-.socialMedia > i{
- font-size: 20px;
- color: white;
- margin: 10px;
+.socialMedia>i {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
 
 }
-.socialMedia > i:hover{
+
+.socialMedia>i:hover {
     color: black;
     transition: 0.5s;
 }
 
 
-.navContent{
+.navContent {
     display: flex;
     justify-content: space-evenly;
     margin-top: 100px;
     height: 500px;
 }
 
-.navContentTitle{
-display: flex;
-width: 300px;
-flex-direction: column;
+.navContentTitle {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
 
 }
-.navContentTitle > div > h1{
-    color:white; 
+
+.navContentTitle>div>h1 {
+    color: white;
     font-size: 40px;
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: normal;
 }
 
-.navContentTitle > div > button:nth-child(1){
-  background-color: rgba(234, 68, 68, 0.92);
-  border:none; 
-  color: white;
-  padding: 15px 32px; 
-  text-align: center;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 5px;
-  font-family: "Roboto", serif;
-  font-weight: 500;
-  font-style: normal;
+.navContentTitle>div>button:nth-child(1) {
+    background-color: rgba(234, 68, 68, 0.92);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
 }
-.navContentTitle > div > button:nth-child(2){
+
+.navContentTitle>div>button:nth-child(2) {
 
     background-color: rgba(32, 32, 123, 0.68);
     border: none;
     color: white;
-    padding:15px 32px; 
+    padding: 15px 32px;
     text-align: center;
     display: inline-block;
     font-size: 14px;
@@ -108,23 +115,24 @@ flex-direction: column;
 
 }
 
-.navContentPhone1 > img{
- width: 330px;
+.navContentPhone1>img {
+    width: 330px;
 }
 
-#feature{
+#feature {
     display: flex;
     flex-direction: column;
 }
 
-.featureHeading{
+.featureHeading {
     margin-top: 80px;
     margin-left: 483px;
-    
+
 
 
 }
-.featureHeading>h2{
+
+.featureHeading>h2 {
     margin-bottom: 6px;
     font-family: "Roboto", serif;
     font-weight: 500;
@@ -132,46 +140,47 @@ flex-direction: column;
     font-size: 35px;
     color: rgba(56, 56, 223, 0.774);
 }
-.featureHeading>p{
+
+.featureHeading>p {
     margin-top: 1px;
     margin-left: 80px;
     color: rgb(167, 165, 165);
 }
 
-.featureContent{
+.featureContent {
     margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.card{
+.card {
     display: flex;
     width: 350px;
-   
-    
+
+
 }
 
 
-.fa-diamond{
+.fa-diamond {
     font-size: 50px;
     margin-top: 28px;
     color: orangered;
 
 }
 
-.fa-stack-exchange{
-font-size: 50px;
-margin-top: 28px;
-color:orangered
-}
-
-.fa-wpforms{
+.fa-stack-exchange {
     font-size: 50px;
     margin-top: 28px;
-    color:orangered
-
+    color: orangered
 }
-.card>div>h3{
+
+.fa-wpforms {
+    font-size: 50px;
+    margin-top: 28px;
+    color: orangered
+}
+
+.card>div>h3 {
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: normal;
@@ -179,50 +188,53 @@ color:orangered
     margin-left: 12px;
 }
 
-.card>div>p{
+.card>div>p {
     color: rgb(86, 85, 85);
     margin-top: 8px;
     margin-left: 12px;
-    
+
 }
 
-.featureCards{
+.featureCards {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 70px;
-    
+
 }
-.card1{
+
+.card1 {
     height: 280px;
     margin-right: -50px;
 }
-.card2{
+
+.card2 {
     height: 500px;
     z-index: 10;
 }
-.card3{
+
+.card3 {
     height: 280px;
     margin-left: -50px;
 }
 
-.cardImage>img{
+.cardImage>img {
     height: 500px;
 }
 
 
-.screenshot{
+.screenshot {
     display: flex;
     flex-direction: column;
 }
 
-.screenshotHeading{
+.screenshotHeading {
 
     margin-top: 80px;
     margin-left: 483px;
 }
 
-.screenshotHeading>h2{
+.screenshotHeading>h2 {
 
     margin-bottom: 6px;
     font-family: "Roboto", serif;
@@ -232,23 +244,24 @@ color:orangered
     color: rgba(56, 56, 223, 0.774);
 }
 
-.screenshotHeading>p{
+.screenshotHeading>p {
     margin-top: 1px;
     margin-left: 45px;
     color: rgb(167, 165, 165);
 }
 
-.screenshotScreen1{
-display: flex;
-justify-content: space-evenly;
-margin-top: 110px;
+.screenshotScreen1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 110px;
 
 }
-.screenshotImage>img{
+
+.screenshotImage>img {
     height: 350px;
 }
 
-#screenshotImage1>p{
+#screenshotImage1>p {
     transform: rotate(90deg);
     color: rgba(119, 136, 153, 0.781);
     font-size: 110px;
@@ -258,40 +271,42 @@ margin-top: 110px;
 
 }
 
-#screenshotImage2>p{
+#screenshotImage2>p {
     transform: rotate(90deg);
     color: rgba(119, 136, 153, 0.781);
     font-size: 112px;
     position: absolute;
     left: 69%;
     z-index: -2;
-    
+
 
 }
-#screenshotImage3>p{
+
+#screenshotImage3>p {
 
     transform: rotate(90deg);
     color: rgba(119, 136, 153, 0.781);
     font-size: 120px;
     position: absolute;
-    left:25%;
-    z-index: -2; 
+    left: 25%;
+    z-index: -2;
 }
 
 
 
-.screenshotContent{
+.screenshotContent {
     width: 300px;
     margin-top: 80px;
 }
-.screenshotContent>div>h3{
+
+.screenshotContent>div>h3 {
 
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: normal;
 }
 
-.screenshotContent>div>h3{
+.screenshotContent>div>h3 {
     color: rgb(86, 85, 85);
 }
 
@@ -309,84 +324,85 @@ margin-top: 110px;
 } */
 
 .circle1 {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
-    gap: -20px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: -20px;
 }
 
 .circle1 div {
-    width: 60px; 
+    width: 60px;
     height: 60px;
-    border: 2px dashed lightgray; 
-    border-radius: 50%; 
-    display: flex; 
+    border: 2px dashed lightgray;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;
     margin-left: -127px;
 }
 
 .circle1 div p {
-    margin: 0; 
+    margin: 0;
     color: lightgray;
 }
 
 .circle2 {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
-    gap: -20px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: -20px;
 }
 
 .circle2 div {
-    width: 60px; 
+    width: 60px;
     height: 60px;
-    border: 2px dashed lightgray; 
-    border-radius: 50%; 
-    display: flex; 
+    border: 2px dashed lightgray;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;
     margin-left: -129px;
 }
 
 .circle2 div p {
-    margin: 0; 
+    margin: 0;
     color: lightgray;
 }
 
 
-.screenshotScreen2{
-display: flex;
-justify-content: space-evenly;
-margin-top: 110px;
-}
-.screenshotScreen3{
-display: flex;
-justify-content: space-evenly;
-margin-top: 110px;
+.screenshotScreen2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 110px;
 }
 
-#reviews{
+.screenshotScreen3 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 110px;
+}
+
+#reviews {
 
     display: flex;
     flex-direction: column;
-    
+
 
 }
 
-.reviewHeading{
+.reviewHeading {
 
     margin-top: 80px;
     margin-left: 483px;
 }
 
-.reviewHeading>h3{
+.reviewHeading>h3 {
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: normal;
@@ -395,17 +411,18 @@ margin-top: 110px;
     font-size: 25px;
 }
 
-.reviewHeading>p{
+.reviewHeading>p {
     margin-top: 2px;
     margin-left: 95px;
     color: rgb(86, 85, 85);
 }
 
-.leftQuote{
+.leftQuote {
     font-size: 20px;
     color: rgba(56, 56, 223, 0.774);
 }
-.rightQuote{
+
+.rightQuote {
     margin-top: 2px;
     font-size: 20px;
     margin-left: 320px;
@@ -413,9 +430,9 @@ margin-top: 110px;
 
 }
 
-.reviewContent1{
+.reviewContent1 {
 
-    display:flex; 
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -423,14 +440,15 @@ margin-top: 110px;
     margin-bottom: 1px;
 
 }
-.reviewContent1>div{
+
+.reviewContent1>div {
     width: 350px;
 }
 
 
-.reviewContent2{
+.reviewContent2 {
 
-    display:flex; 
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -438,112 +456,121 @@ margin-top: 110px;
 
 }
 
-.reviewContent2>div{
+.reviewContent2>div {
     width: 350px;
 }
 
-#downloadApp{
+#downloadApp {
     display: flex;
     justify-content: space-evenly;
     margin-top: 120px;
     background-image: url('../image/homebg.png');
 }
 
-.downloadAppContainerLeft{
- display: flex;
- flex-direction: column;
- flex-wrap: wrap;
- width: 200px;
- margin-top: 80px;
+.downloadAppContainerLeft {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+    margin-top: 80px;
 }
-.downloadAppContainerLeft>div>h3{
-font-size: 25px;
-color: white;
-margin-bottom: 2px;
+
+.downloadAppContainerLeft>div>h3 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 2px;
 
 }
 
-.downloadAppContainerLeft>div>p{
-font-size: 15px;
-color:white;
-width: 253px;
-margin-top: 0px;
+.downloadAppContainerLeft>div>p {
+    font-size: 15px;
+    color: white;
+    width: 253px;
+    margin-top: 0px;
 }
 
-.playstoreImage{
+.playstoreImage {
     display: flex;
 }
-.playstoreImage>div{
+
+.playstoreImage>div {
     margin-right: 12px;
 }
-.downloadAppContainerRight{
+
+.downloadAppContainerRight {
     margin-top: 120px;
     width: 400px;
 }
-.downloadAppContainerRight>img{
-    width:500px; 
+
+.downloadAppContainerRight>img {
+    width: 500px;
 }
 
-.mainFooter{
+.mainFooter {
     display: flex;
     flex-direction: column;
     background-color: rgba(17, 18, 32, 0.728);
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-evenly;
-    
+
     height: 50px;
-    
+
 }
-.footerLogo{
+
+.footerLogo {
     width: 200px;
     margin-top: 13px;
 }
 
-.footerItems{
+.footerItems {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-   
+
 }
-.footerItems > div > a{
+
+.footerItems>div>a {
     color: white;
     text-decoration: none;
     font-size: 15px;
-    
+
     font-family: "Roboto", serif;
-   font-weight: 500;
-   font-style: normal;
+    font-weight: 500;
+    font-style: normal;
     margin: 10px;
 }
-.footerItems>div>a:hover{
+
+.footerItems>div>a:hover {
     color: black;
     transition: 0.5s;
 }
-.footerSocialMedia{
+
+.footerSocialMedia {
     margin-top: 2px;
 }
 
-.footerSocialMedia > i{
- font-size: 20px;
- color: white;
- margin: 10px;
+.footerSocialMedia>i {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
 
 }
-.footerSocialMedia > i:hover{
+
+.footerSocialMedia>i:hover {
     color: black;
     transition: 0.5s;
 }
 
-.mainFooter>div>img{
+.mainFooter>div>img {
     width: 850px;
     margin-left: 200px;
     margin-top: 40px;
 }
 
-.mainFooter>div>p{
+.mainFooter>div>p {
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: normal;
