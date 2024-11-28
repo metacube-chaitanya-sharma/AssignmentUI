@@ -1,0 +1,77 @@
+#sidebar {
+    background-color: #313a46 !important;
+}
+
+#sidebar a {
+    color: rgb(131, 145, 162) !important;
+    font-size: small;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+}
+
+#sidebar a:hover {
+    color: white !important;
+}
+
+.nav-text {
+    color: rgb(131, 145, 162);
+    font-size: x-small;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+}
+
+.apps-text {
+    color: rgb(131, 145, 162);
+    font-size: x-small;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+}
+
+.collapsing-button {
+    background: transparent;
+    border: none !important;
+}
+
+#input-search {
+    background-color: #f0f3f8 !important;
+    color: #6c757d !important;
+}
+
+#input-button {
+    background-color: rgb(114, 124, 245);
+    color: #f0f3f8;
+    border: none;
+}
+
+.flag-img {
+    height: 12px;
+}
+
+#profile-img {
+    border-radius: 50%;
+}
+
+.profile {
+    border-left: 2px solid #6c757d;
+}
+
+.profile p {
+    margin: 0;
+    margin-left: 4px;
+    color: #6c757d !important;
+}
+
+#current-state {
+    p {
+        color: #6c757d;
+        font-size: large;
+    }
+}
+
+#status {
+    div {
+        height: 200px;
+        background-color: grey;
+        border: black;
+    }
+}

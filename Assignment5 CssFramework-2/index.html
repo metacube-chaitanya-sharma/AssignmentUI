@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <div class="col-3 bg-secondary collapse collapse-horizontal" id="sidebar" aria-expanded="true">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="assets/images/logo.png" class="my-4" alt="LOGO">
+                </div>
+                <small class="sidebar-heading m-4 nav-text">NAVIGATION</small>
+                <div class="d-flex flex-column align-items-start m-3">
+                    <ul class="list-unstyled">
+                        <li class="m-2">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#submenu"
+                                aria-expanded="false" aria-controls="submenu">
+                                <i class="fas fa-home me-2"></i>Dashboard
+                            </a>
+                        </li>
+                        <div class="collapse" id="submenu">
+                            <ul class="list-unstyled">
+                                <li class="m-2"><a href="#" class="text-decoration-none"><i
+                                            class="me-4"></i>Analytics</a></li>
+                                <li class="m-2"><a href="#" class="text-decoration-none"><i
+                                            class="me-4"></i>Ecommerce</a></li>
+                                <li class="m-2"><a href="#" class="text-decoration-none"><i
+                                            class="me-4"></i>Projects</a></li>
+                                <li class="m-2"><a href="#" class="text-decoration-none"><i class="me-4"></i>CRM</a>
+                                </li>
+                                <li class="m-2"><a href="#" class="text-decoration-none"><i
+                                            class="me-4"></i>E-Wallet</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                    <div class="m-2">
+                        <div class="mb-4"><small class="sidebar-heading apps-text">APPS</small></div>
+
+                        <p><a href="#" class="text-decoration-none ">
+                                <i class="fas fa-calendar me-2 mb-2"></i>Calender
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fa-comment me-2 mb-2"></i>Chat
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fas fa-chart-line me-2 mb-2"></i>CRM
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fa-shopping-cart me-2 mb-2"></i>Ecommerce
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fa-envelope me-2 mb-2"></i>Email
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fa-folder me-2 mb-2"></i>Projects
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fa-user me-2 mb-2"></i>Social Feed
+                            </a></p>
+                        <p><a href="#" class="text-decoration-none">
+                                <i class="fas fa-check-circle me-2 mb-2"></i>Tasks
+                            </a></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-9" id="main-column">
+                <nav class="navbar border-bottom">
+                    <div class="container-fluid d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div id="collapsing-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#sidebar">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="d-flex ms-3">
+                                <input class="form-control rounded-1" id="input-search" type="search"
+                                    placeholder="Search..." aria-label="Search">
+                                <button class="btn btn-outline-success" id="input-button" type="submit">Search</button>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <ul class="list-unstyled mb-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="d-flex align-items-center me-2">
+                                            <img src="assets/images/us.jpg" alt="English" class="flag-img me-2">
+                                            <span>English</span>
+                                        </div>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li class="d-flex align-items-center m-2">
+                                            <img src="assets/images/germany.jpg" alt="Germany" class="flag-img me-2">
+                                            <a class="dropdown-item" href="#">Germany</a>
+                                        </li>
+                                        <li class="d-flex align-items-center m-2">
+                                            <img src="assets/images/italy.jpg" alt="Italy" class="flag-img me-2">
+                                            <a class="dropdown-item" href="#">Italy</a>
+                                        </li>
+                                        <li class="d-flex align-items-center m-2">
+                                            <img src="assets/images/russia.jpg" alt="Russia" class="flag-img me-2">
+                                            <a class="dropdown-item" href="#">Russia</a>
+                                        </li>
+                                        <li class="d-flex align-items-center m-2">
+                                            <img src="assets/images/spain.jpg" alt="Spain" class="flag-img me-2">
+                                            <a class="dropdown-item" href="#">Spain</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <i class="fas fa-bell ms-3 me-2"></i>
+                            <i class="fas fa-cog mx-2"></i>
+                            <i class="fas fa-moon mx-2"></i>
+
+                            <div class="d-flex align-items-center justify-content-center profile">
+                                <div class="ms-3">
+                                    <img src="assets/images/profile.png" id="profile-img" alt="Profile">
+                                </div>
+                                <div>
+                                    <p>Domonic Keller</p>
+                                    <p>Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="current-state" class="d-flex align-items-center justify-content-between m-3">
+                    <div>
+                        <p>Projects</p>
+                    </div>
+                    <div>
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                            aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none"
+                                        style="color: rgb(114, 124, 245);">Hyper</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none"
+                                        style="color: rgb(114, 124, 245);">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/style.js"></script>
+</body>
+
+</html>
