@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+
         if (isValid) {
             if (currentStep === steps.length - 1) {
                 const regId = 'EMP' + Math.floor(1000 + Math.random() * 9000);
@@ -442,3 +443,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
