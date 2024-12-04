@@ -1,148 +1,234 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking System</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Metacube Parking</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="image/backgroundImg.png">
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-        <ul>
-            <div>
-                <img src="./image/metacube-logo.jpg" alt="Logo">
-            </div>
-            <li><a href="#add-employee">Add Employee</a></li>
-            <li><a href="#add-vehicle">Add Vehicle</a></li>
-            <li><a href="#give-feedback">Give Feedback</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-        </ul>
-
-        <div>
-            <img src="./image/logo.png" alt="Logo">
+    <nav id="nav-id">
+        <div class="nav-list">
+            <a href="#employeeSection" class="list-item">Add Employee</a>
+        </div>
+        <div class="nav-list">
+            <a href="#vehicleSection" class="list-item">Add Vehicle</a>
+        </div>
+        <div class="nav-list">
+            <a href="#feedbackForm" class="list-item">Give Feedback</a>
+        </div>
+        <div class="nav-list">
+            <a href="#pricing" class="list-item">Pricing</a>
         </div>
     </nav>
+    <div class="box-container">
+        <div class="image-container">
+            <img src="./image/backgroundImg.png" class="park-image"/>
+        </div>
+        <div class="text-container">
+            <p class="text-value">Est duis ea duis consequat deserunt ex quis velit est. Anim reprehenderit ipsum
+                exercitation do
+                exercitation ex irure. Magna dolore excepteur duis Lorem deserunt dolore. Est qui elit incididunt
+                proident cupidatat sunt.</p>
 
-    <!-- Cover Image -->
-    <section id="cover-image">
-        <img src="./image/parking2.jpg" alt="Parking System Cover Image 1">
-        <img src="./image/parking2.jpg" alt="Parking System Cover Image 2">
-    </section>
+        </div>
+    </div>
 
-    <!-- Regions -->
-    <section id="regions">
-        <!-- Add Employee Region -->
-        <div class="collapsible" id="employee-section">
-            <div class="collapsible-header">Employee (Add an employee to the metacube parking system.) Please provide
-                their full name, employee ID, department, and contact information for processing.
+
+
+    <div class="container" id="employeeSection">
+        <details>
+            <summary class="heading">Add Employee</summary>
+            <div class="form-container">
+                <form class="form">
+                    <div class="field active" id="nameField">
+                        <label for="name">Enter your name:</label>
+                        <input type="text" id="name" placeholder="Full Name" required onchange="addcolour()">
+                        <button type="button" class="btn" onclick="nextStep('genderField', 'name')">Next</button>
+                    </div>
+
+                    <div class="field" id="genderField">
+                        <label>Hi <span id="nameDisplay"></span>! Can I know your gender?</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <button type="button" class="btn" onclick="nextStep('emailField', 'gender')">Next</button>
+                    </div>
+
+                    <div class="field" id="emailField">
+                        <label>Enter your email:</label>
+                        <input type="email" id="email" placeholder="Email" required onchange="addcolour()">
+                        <button type="button" class="btn" onclick="nextStep('passwordField', 'email')">Next</button>
+                    </div>
+
+                    <div class="field" id="passwordField">
+                        <label>Create a password:</label>
+                        <input type="password" id="password" placeholder="Password" required
+                            onchange="checkPasswordStrength()">
+                        <div class="password-strength" id="passwordStrength"></div>
+                        <button type="button" class="btn"
+                            onclick="nextStep('confirmPasswordField', 'password')">Next</button>
+                    </div>
+
+                    <div class="field" id="confirmPasswordField">
+                        <label>Confirm your password:</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <button type="button" class="btn"
+                            onclick="nextStep('phoneField', 'confirmPassword')">Next</button>
+                    </div>
+
+                    <div class="field" id="phoneField">
+                        <label>Enter your contact number:</label>
+                        <input type="text" id="phone" placeholder="Contact Number" required onchange="addcolour()">
+                        <button type="submit" class="btn" onclick="showInfo(event)">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="collapsible-content">
-                <div class="employee-section">
-                    <div id="emp-dynamic-form">
-                        <label for="full-name">Enter your name:</label>
-                        <input type="text" id="full-name" name="full-name" required>
-                        <button type="button" id="next-button">Next</button>
+        </details>
+    </div>
+
+
+
+    <div class="container" id="vehicleSection">
+        <details>
+            <summary class="heading">Add Vehicle</summary>
+            <div class="form-container">
+                <form class="form">
+
+                    <div class="field active" id="vehicleNameField">
+                        <label for="vehicleName">Enter vehicle name:</label>
+                        <input type="text" id="vehicleName" placeholder="Vehicle Name" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('vehicleModelField', 'vehicleNameField')">Next</button>
                     </div>
-                    <div id="emp-registration-id" style="display: none;">
-                        <p>Your registration ID is: <span id="emp-reg-id"></span></p>
+
+                    <div class="field" id="vehicleModelField">
+                        <label for="vehicleModel">Enter vehicle model:</label>
+                        <input type="text" id="vehicleModel" placeholder="Vehicle Model" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('vehicleNumberField', 'vehicleModelField')">Next</button>
                     </div>
-                    <img src="./image/add-employee.png" id="add-employee-img" alt="Add Employee Image">
-                </div>
+
+                    <div class="field" id="vehicleNumberField">
+                        <label>Enter vehicle number:</label>
+                        <input type="text" id="vehicleNumber" placeholder="Vehicle Number" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('emplyeeIdField', 'vehicleNumberField')">Next</button>
+                    </div>
+
+                    <div class="field" id="emplyeeIdField">
+                        <label>Enter employee ID:</label>
+                        <input type="number" id="emplyeeId" placeholder="Employee ID" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('vehicleTypeField', 'emplyeeIdField')">Next</button>
+                    </div>
+
+                    <div class="field" id="vehicleTypeField">
+                        <label>Which type of vehicle do you have?</label>
+                        <select id="vehicleType" required>
+                            <option value="">Select Vehicle Type</option>
+                            <option value="Cycle">Cycle</option>
+                            <option value="MotorCycle">MotorCycle</option>
+                            <option value="FourWheeler">Four Wheeler</option>
+                        </select>
+                        <button type="submit" class="btn" onclick="showVehicleInfo(event)">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </details>
+    </div>
+
+
+
+    <div class="feedback-container" id="feedbackForm">
+        <div class="feedback-image-container">
+            <img src="./image/feedback-image.jpg" class="feedback-image" />
+        </div>
+        <div class="feedback-form-container">
+            <p class="feedback-form-heading">Get In Touch</p>
+            <div class="feedback-form-container-section">
+                <form class="feedback-form">
+                    <input class="feedback-input" type="text" name="applicant-name" id="applicant-name" value=""
+                        placeholder="Name" />
+                    <input class="feedback-input" type="email" name="applicant-email" id="applicant-email" value=""
+                        placeholder="Email" />
+                    <input class="feedback-input" type="text" name="subject" id="subject" value=""
+                        placeholder="Subject" />
+                    <textarea class="feedback-message" placeholder="Message"></textarea>
+                    <div class="feedback-btn-container">
+                        <button class="feedback-btn">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
-        <!-- Add Vehicle Region -->
-        <div class="collapsible" id="vehicle-section">
-            <div class="collapsible-header">Vehicle (Add a vehicle to the metacube parking system.) Please provide their
-                Vehicle Company, Model, Number, and other information for processing.</div>
-            <div class="collapsible-content" style="display: block;">
-                <div class="vehicle-section">
-                    <div id="vehicle-dynamic-form">
-                        <label for="vehicle-make">Enter Vehicle Make (Company):</label>
-                        <input type="text" id="vehicle-make" name="vehicle-make" required>
-                        <button type="button" id="next-button">Next</button>
-                    </div>
-                    <div id="vehicle-registration-id" style="display: none;">
-                        <p>Your registration ID is: <span id="vehicle-reg-id"></span></p>
-                    </div>
-                    <img src="./image/add-vehicle.jpg" alt="Add Vehicle Image">
+
+
+    <div class="pricing-container" id="pricing">
+        <h1 class="pricing-heading">Pricing</h1>
+        <div class="pricing-section">
+            <div id="currencyModal" class="modal">
+                <div class="modal-content">
+                    <form>
+                        <span id="closeModalBtn" class="close-btn">&times;</span>
+                        <h2>Select Currency</h2>
+                        <select id="currencySelect" class="currency-select">
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="YEN">YEN - Japanese Yen</option>
+                        </select>
+                        <h2>Select Vehicle</h2>
+                        <select id="vehiclePriceSelect" class="vehiclePrice-select">
+                            <option value="">Select Vehicle</option>
+                            <option value="Cycle">Cycle</option>
+                            <option value="MotorCycle">MotorCycle</option>
+                            <option value="FourWheeler">Four Wheeler</option>
+                        </select>
+                        <button id="getPassBtn" class="btn" onclick="calculateAmount(event)">Get Pass</button>
+                    </form>
                 </div>
             </div>
-        </div>
-
-        <!-- Pricing Region -->
-        <div id="pricing" class="region">
-            <h3>Pricing</h3>
-            <p>Great features with best pricing options.</p>
-            <label for="currency-select">Select Currency:</label>
-            <select id="currency-select">
-                <option value="USD">USD</option>
-                <option value="YEN">YEN</option>
-                <option value="EUR">EUR</option>
-            </select>
-            <div id="pricing-section">
-                <div class="pricing-box" id="cycle-pricing">
-                    <h3>Cycle</h3>
-                    <div class="pricing-circle">
-                        <span class="price" data-usd="100">$100</span>
-                    </div>
-                    <ul>
-                        <li>Daily: <span class="price" data-usd="5">$5</span></li>
-                        <li>Monthly: <span class="price" data-usd="100">$100</span></li>
-                        <li>Yearly: <span class="price" data-usd="500">$500</span></li>
-                    </ul>
-                    <button>Purchase Now</button>
+            <div class="pricing-sub-section">
+                <h2 class="pricing-heading1">Cycle</h2>
+                <div class="monthly-pricing">
+                    <h3 class="pricing-heading2">$100/Month</h3>
                 </div>
+                <p class="pricing-paragraph">$5 Daily</p>
+                <p class="pricing-paragraph">$100 Monthly</p>
+                <p class="pricing-paragraph">$500 yearly</p>
 
-                <div class="pricing-box" id="bike-pricing">
-                    <h3>MotorCycle</h3>
-                    <div class="pricing-circle">
-                        <span class="price" data-usd="200">$200</span>
-                    </div>
-                    <ul>
-                        <li>Daily: <span class="price" data-usd="10">$10</span></li>
-                        <li>Monthly: <span class="price" data-usd="200">$200</span></li>
-                        <li>Yearly: <span class="price" data-usd="1000">$1000</span></li>
-                    </ul>
-                    <button>Purchase Now</button>
-                </div>
+                <button id="openModalBtn" class="purchase-btn">Purchase Now</button>
+            </div>
 
-                <div class="pricing-box" id="car-pricing">
-                    <h3>Four Wheelers</h3>
-                    <div class="pricing-circle">
-                        <span class="price" data-usd="500">$500</span>
-                    </div>
-                    <ul>
-                        <li>Daily: <span class="price" data-usd="20">$20</span></li>
-                        <li>Monthly: <span class="price" data-usd="500">$500</span></li>
-                        <li>Yearly: <span class="price" data-usd="3500">$3500</span></li>
-                    </ul>
-                    <button>Purchase Now</button>
+            <div class="pricing-sub-section">
+                <h2 class="pricing-heading1">MotorCycle</h2>
+                <div class="monthly-pricing">
+                    <h3 class="pricing-heading2">$200/Month</h3>
                 </div>
+                <p class="pricing-paragraph">$10 Daily</p>
+                <p class="pricing-paragraph">$200 Monthly</p>
+                <p class="pricing-paragraph">$1000 yearly</p>
+                <button id="openModalBtn2" class="purchase-btn">Purchase Now</button>
+            </div>
+
+            <div class="pricing-sub-section">
+                <h2 class="pricing-heading1">Four Wheelers</h2>
+                <div class="monthly-pricing">
+                    <h3 class="pricing-heading2">$500/Month</h3>
+                </div>
+                <p class="pricing-paragraph">$20 Daily</p>
+                <p class="pricing-paragraph">$500 Monthly</p>
+                <p class="pricing-paragraph">$3500 yearly</p>
+                <button id="openModalBtn3" class="purchase-btn">Purchase Now</button>
             </div>
         </div>
-
-        <div id="parkingSlipModal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h2>Parking Slip</h2>
-                <div id="parkingSlipDetails">
-                    <p>Employee Name: <span id="modal-employee-name"></span></p>
-                    <p>Employee ID: <span id="modal-employee-id"></span></p>
-                    <p>Vehicle ID: <span id="modal-vehicle-id"></span></p>
-                    <p>Vehicle Brand: <span id="modal-vehicle-brand"></span></p>
-                    <p>Vehicle Model: <span id="modal-vehicle-model"></span></p>
-                    <p>Vehicle Type: <span id="modal-vehicle-type"></span></p>
-                    <p>Vehicle Number: <span id="modal-vehicle-number"></span></p>
-                    <p>Pricing Plan: <span id="modal-pricing-plan"></span></p>
-                    <p>Total Amount: <span id="modal-total-amount"></span></p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 
