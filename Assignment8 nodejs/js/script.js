@@ -1,3 +1,4 @@
+
 const nextStep = (nextFieldId, inputId) => {
     const currentField = document.querySelector('.field.active');
     const nextField = document.getElementById(nextFieldId);
