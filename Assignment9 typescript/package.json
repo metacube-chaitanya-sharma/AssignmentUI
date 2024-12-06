@@ -1,0 +1,17 @@
+{
+  "name": "parkingsystem---copy",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.ts",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.7.2"
+  }
+}

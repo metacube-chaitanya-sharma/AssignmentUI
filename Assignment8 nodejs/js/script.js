@@ -17,7 +17,7 @@ const nextStep = (nextFieldId, inputId) => {
 };
 
 const nextStep1 = (nextFieldId, inputId) => {
-    const currentField = document.getElementById(inputId);
+    const currentField = document.getElementById(inputId); 
     const nextField = document.getElementById(nextFieldId);
 
     if (!isFieldValid(currentField)) {

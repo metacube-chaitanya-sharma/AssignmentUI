@@ -1,0 +1,235 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metacube Parking</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="backgroundImg.png">
+</head>
+
+<body>
+    <nav id="nav-id">
+        <div class="nav-list">
+            <a href="#employeeSection" class="list-item">Add Employee</a>
+        </div>
+        <div class="nav-list">
+            <a href="#vehicleSection" class="list-item">Add Vehicle</a>
+        </div>
+        <div class="nav-list">
+            <a href="#feedbackForm" class="list-item">Give Feedback</a>
+        </div>
+        <div class="nav-list">
+            <a href="#pricing" class="list-item">Pricing</a>
+        </div>
+    </nav>
+    <div class="box-container">
+        <div class="image-container">
+            <img src="backgroundImg.png" class="park-image"/>
+        </div>
+        <div class="text-container">
+            <p class="text-value">Est duis ea duis consequat deserunt ex quis velit est. Anim reprehenderit ipsum
+                exercitation do
+                exercitation ex irure. Magna dolore excepteur duis Lorem deserunt dolore. Est qui elit incididunt
+                proident cupidatat sunt.</p>
+
+        </div>
+    </div>
+
+
+
+    <div class="container" id="employeeSection">
+        <details>
+            <summary class="heading">Add Employee</summary>
+            <div class="form-container">
+                <form class="form">
+                    <div class="field active" id="nameField">
+                        <label for="name">Enter your name:</label>
+                        <input type="text" id="name" placeholder="Full Name" required onchange="addcolour()">
+                        <button type="button" class="btn" onclick="nextStep('genderField', 'name')">Next</button>
+                    </div>
+
+                    <div class="field" id="genderField">
+                        <label>Hi <span id="nameDisplay"></span>! Can I know your gender?</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <button type="button" class="btn" onclick="nextStep('emailField', 'gender')">Next</button>
+                    </div>
+
+                    <div class="field" id="emailField">
+                        <label>Enter your email:</label>
+                        <input type="email" id="email" placeholder="Email" required onchange="addcolour()">
+                        <button type="button" class="btn" onclick="nextStep('passwordField', 'email')">Next</button>
+                    </div>
+
+                    <div class="field" id="passwordField">
+                        <label>Create a password:</label>
+                        <input type="password" id="password" placeholder="Password" required
+                            onchange="checkPasswordStrength()">
+                        <div class="password-strength" id="passwordStrength"></div>
+                        <button type="button" class="btn"
+                            onclick="nextStep('confirmPasswordField', 'password')">Next</button>
+                    </div>
+
+                    <div class="field" id="confirmPasswordField">
+                        <label>Confirm your password:</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <button type="button" class="btn"
+                            onclick="nextStep('phoneField', 'confirmPassword')">Next</button>
+                    </div>
+
+                    <div class="field" id="phoneField">
+                        <label>Enter your contact number:</label>
+                        <input type="text" id="phone" placeholder="Contact Number" required onchange="addcolour()">
+                        <button type="submit" class="btn" onclick="showInfo(event)">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </details>
+    </div>
+
+
+
+    <div class="container" id="vehicleSection">
+        <details>
+            <summary class="heading">Add Vehicle</summary>
+            <div class="form-container">
+                <form class="form">
+
+                    <div class="field active" id="vehicleNameField">
+                        <label for="vehicleName">Enter vehicle name:</label>
+                        <input type="text" id="vehicleName" placeholder="Vehicle Name" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('vehicleModelField', 'vehicleNameField')">Next</button>
+                    </div>
+
+                    <div class="field" id="vehicleModelField">
+                        <label for="vehicleModel">Enter vehicle model:</label>
+                        <input type="text" id="vehicleModel" placeholder="Vehicle Model" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('vehicleNumberField', 'vehicleModelField')">Next</button>
+                    </div>
+
+                    <div class="field" id="vehicleNumberField">
+                        <label>Enter vehicle number:</label>
+                        <input type="text" id="vehicleNumber" placeholder="Vehicle Number" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('emplyeeIdField', 'vehicleNumberField')">Next</button>
+                    </div>
+
+                    <div class="field" id="emplyeeIdField">
+                        <label>Enter employee ID:</label>
+                        <input type="number" id="emplyeeId" placeholder="Employee ID" required onchange="addcolour()">
+                        <button type="button" class="btn"
+                            onclick="nextStep1('vehicleTypeField', 'emplyeeIdField')">Next</button>
+                    </div>
+
+                    <div class="field" id="vehicleTypeField">
+                        <label>Which type of vehicle do you have?</label>
+                        <select id="vehicleType" required>
+                            <option value="">Select Vehicle Type</option>
+                            <option value="Cycle">Cycle</option>
+                            <option value="MotorCycle">MotorCycle</option>
+                            <option value="FourWheeler">Four Wheeler</option>
+                        </select>
+                        <button type="submit" class="btn" onclick="showVehicleInfo(event)">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </details>
+    </div>
+
+
+
+    <div class="feedback-container" id="feedbackForm">
+        <div class="feedback-image-container">
+            <img src="feedback-image.jpg" class="feedback-image" />
+        </div>
+        <div class="feedback-form-container">
+            <p class="feedback-form-heading">Get In Touch</p>
+            <div class="feedback-form-container-section">
+                <form class="feedback-form">
+                    <input class="feedback-input" type="text" name="applicant-name" id="applicant-name" value=""
+                        placeholder="Name" />
+                    <input class="feedback-input" type="email" name="applicant-email" id="applicant-email" value=""
+                        placeholder="Email" />
+                    <input class="feedback-input" type="text" name="subject" id="subject" value=""
+                        placeholder="Subject" />
+                    <textarea class="feedback-message" placeholder="Message"></textarea>
+                    <div class="feedback-btn-container">
+                        <button class="feedback-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pricing-container" id="pricing">
+        <h1 class="pricing-heading">Pricing</h1>
+        <div class="pricing-section">
+            <div id="currencyModal" class="modal">
+                <div class="modal-content">
+                    <form>
+                        <span id="closeModalBtn" class="close-btn">&times;</span>
+                        <h2>Select Currency</h2>
+                        <select id="currencySelect" class="currency-select">
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="YEN">YEN - Japanese Yen</option>
+                        </select>
+                        <h2>Select Vehicle</h2>
+                        <select id="vehiclePriceSelect" class="vehiclePrice-select">
+                            <option value="">Select Vehicle</option>
+                            <option value="Cycle">Cycle</option>
+                            <option value="MotorCycle">MotorCycle</option>
+                            <option value="FourWheeler">Four Wheeler</option>
+                        </select>
+                        <button id="getPassBtn" class="btn" onclick="calculateAmount(event)">Get Pass</button>
+                    </form>
+                </div>
+            </div>
+            <div class="pricing-sub-section">
+                <h2 class="pricing-heading1">Cycle</h2>
+                <div class="monthly-pricing">
+                    <h3 class="pricing-heading2">$100/Month</h3>
+                </div>
+                <p class="pricing-paragraph">$5 Daily</p>
+                <p class="pricing-paragraph">$100 Monthly</p>
+                <p class="pricing-paragraph">$500 yearly</p>
+
+                <button id="openModalBtn" class="purchase-btn">Purchase Now</button>
+            </div>
+
+            <div class="pricing-sub-section">
+                <h2 class="pricing-heading1">MotorCycle</h2>
+                <div class="monthly-pricing">
+                    <h3 class="pricing-heading2">$200/Month</h3>
+                </div>
+                <p class="pricing-paragraph">$10 Daily</p>
+                <p class="pricing-paragraph">$200 Monthly</p>
+                <p class="pricing-paragraph">$1000 yearly</p>
+                <button id="openModalBtn2" class="purchase-btn">Purchase Now</button>
+            </div>
+
+            <div class="pricing-sub-section">
+                <h2 class="pricing-heading1">Four Wheelers</h2>
+                <div class="monthly-pricing">
+                    <h3 class="pricing-heading2">$500/Month</h3>
+                </div>
+                <p class="pricing-paragraph">$20 Daily</p>
+                <p class="pricing-paragraph">$500 Monthly</p>
+                <p class="pricing-paragraph">$3500 yearly</p>
+                <button id="openModalBtn3" class="purchase-btn">Purchase Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
