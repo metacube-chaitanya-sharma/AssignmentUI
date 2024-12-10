@@ -1,3 +1,35 @@
+class Employee{
+    name: string;
+    gender: string;
+    email: string;
+    phone: string;
+    password: string;
+
+    constructor(name:string,email:string,phone: string,gender:string,password:string){
+        this.name = name;
+        this.gender = gender;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
+}
+
+class Vehicle{
+    vehicleName: string;
+    vehicleModel: string;
+    vehicleNumber: string;
+    employeeId: string;
+    vehicleType: string;
+    
+    constructor(type: string,name: string,model: string,number: string,employeeId: string){
+        this.vehicleType = type;
+        this.vehicleName = name;
+        this.vehicleModel= model;
+        this.vehicleNumber = number;
+        this.employeeId = employeeId;
+    }
+}
+
 type Pricing = {
     daily: string;
     monthly: string;
@@ -31,7 +63,7 @@ const nextStep = (nextFieldId: string, inputId: string): void => {
 };
 
 const nextStep1 = (nextFieldId: string, inputId: string): void => {
-    const currentField = document.getElementById(inputId) as HTMLElement; 
+    const currentField = document.getElementById(inputId) as HTMLElement;
     const nextField = document.getElementById(nextFieldId) as HTMLElement;
 
     if (!isFieldValid(currentField)) {
@@ -62,26 +94,60 @@ const showInfo = (event: Event): void => {
     const gender = (document.getElementById('gender') as HTMLSelectElement | null)?.value || '';
     const email = (document.getElementById('email') as HTMLInputElement | null)?.value || '';
     const phone = (document.getElementById('phone') as HTMLInputElement | null)?.value || '';
+    const password = (document.getElementById('password') as HTMLInputElement | null)?.value || '';
 
     if (!validatePhone(phone)) {
         const phoneInput = document.getElementById('phone') as HTMLInputElement | null;
         if (phoneInput) phoneInput.classList.add('myClass');
         return;
     }
-
+    
     if (!name || !gender || !email || !phone) {
         alert('Enter valid input');
         return;
     }
-
-    const employeeInfo = `
-    Name: ${name}
-    Gender: ${gender}
-    Email: ${email}
-    Phone: ${phone}
+    
+    const employeeInfo =  new Employee(name,gender,email,phone,password);
+    const employee = `
+    Name: ${employeeInfo.name}
+    Gender: ${employeeInfo.gender}
+    Email: ${employeeInfo.email}
+    Phone: ${employeeInfo.phone}
     RegistrationId: ${Math.random()}
     `;
-    alert(`Employee Information:\n${employeeInfo}`);
+    alert(`Employee Information:\n${employee}`);
+    location.reload();
+};
+
+const showVehicleInfo = (event: Event): void => {
+    event.preventDefault();
+
+    const vehicleName = (document.getElementById('vehicleName') as HTMLInputElement | null)?.value;
+    const vehicleModel = (document.getElementById('vehicleModel') as HTMLInputElement | null)?.value;
+    const vehicleNumber = (document.getElementById('vehicleNumber') as HTMLInputElement | null)?.value;
+    const employeeId = (document.getElementById('emplyeeId') as HTMLInputElement | null)?.value;
+    const vehicleType = (document.getElementById('vehicleType') as HTMLInputElement | null)?.value;
+
+    if (!vehicleName || !vehicleModel || !vehicleNumber || !employeeId || !vehicleType) {
+        alert("Please fill out all fields before submitting.");
+        return;
+    }
+
+    const vehicleInfo =  new Vehicle(vehicleType,vehicleName,vehicleModel,vehicleNumber,employeeId);
+
+    const price = showPricing();
+    console.log(price);
+    alert(`
+    Vehicle Name: ${vehicleInfo.vehicleName}
+    Vehicle Model: ${vehicleInfo.vehicleModel}
+    Vehicle Number: ${vehicleInfo.vehicleNumber}
+    Employee ID: ${vehicleInfo.employeeId}
+    Vehicle Type: ${vehicleInfo.vehicleType}
+    Daily Charge: ${price.daily}
+    Monthly Charge: ${price.monthly}
+    Yearly Charge: ${price.yearly}
+    `);
+
     location.reload();
 };
 
@@ -177,6 +243,7 @@ const isFieldValid = (field: HTMLElement): boolean => {
     }
 
     if (inputElement.type === 'password' && !validatePassword(inputElement.value)) {
+        console.log("hsfd");
         return false;
     }
 
@@ -192,10 +259,9 @@ const validatePhone = (phone: string): boolean => /^[0-9]{10}$/.test(phone);
 const addcolour = (): void => {
     const currentField = document.querySelector('.field.active') as HTMLElement;
     const inputElement = currentField.querySelector('input') as HTMLInputElement;
-    inputElement.classList.remove('myclass');};
-
+    inputElement.classList.remove('myclass');
+};
 
 const validatePassword = (password: string): boolean => {
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+    return /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/.test(password);
 };
-    

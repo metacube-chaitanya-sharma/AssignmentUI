@@ -1,3 +1,23 @@
+var Employee = /** @class */ (function () {
+    function Employee(name, email, phone, gender, password) {
+        this.name = name;
+        this.gender = gender;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
+    return Employee;
+}());
+var Vehicle = /** @class */ (function () {
+    function Vehicle(type, name, model, number, employeeId) {
+        this.vehicleType = type;
+        this.vehicleName = name;
+        this.vehicleModel = model;
+        this.vehicleNumber = number;
+        this.employeeId = employeeId;
+    }
+    return Vehicle;
+}());
 var nextStep = function (nextFieldId, inputId) {
     var currentField = document.querySelector('.field.active');
     var nextField = document.getElementById(nextFieldId);
@@ -40,12 +60,13 @@ var checkPasswordStrength = function () {
     }
 };
 var showInfo = function (event) {
-    var _a, _b, _c, _d;
+    var _a, _b, _c, _d, _e;
     event.preventDefault();
     var name = ((_a = document.getElementById('name')) === null || _a === void 0 ? void 0 : _a.value) || '';
     var gender = ((_b = document.getElementById('gender')) === null || _b === void 0 ? void 0 : _b.value) || '';
     var email = ((_c = document.getElementById('email')) === null || _c === void 0 ? void 0 : _c.value) || '';
     var phone = ((_d = document.getElementById('phone')) === null || _d === void 0 ? void 0 : _d.value) || '';
+    var password = ((_e = document.getElementById('password')) === null || _e === void 0 ? void 0 : _e.value) || '';
     if (!validatePhone(phone)) {
         var phoneInput = document.getElementById('phone');
         if (phoneInput)
@@ -56,8 +77,27 @@ var showInfo = function (event) {
         alert('Enter valid input');
         return;
     }
-    var employeeInfo = "\n    Name: ".concat(name, "\n    Gender: ").concat(gender, "\n    Email: ").concat(email, "\n    Phone: ").concat(phone, "\n    RegistrationId: ").concat(Math.random(), "\n    ");
-    alert("Employee Information:\n".concat(employeeInfo));
+    var employeeInfo = new Employee(name, gender, email, phone, password);
+    var employee = "\n    Name: ".concat(employeeInfo.name, "\n    Gender: ").concat(employeeInfo.gender, "\n    Email: ").concat(employeeInfo.email, "\n    Phone: ").concat(employeeInfo.phone, "\n    RegistrationId: ").concat(Math.random(), "\n    ");
+    alert("Employee Information:\n".concat(employee));
+    location.reload();
+};
+var showVehicleInfo = function (event) {
+    var _a, _b, _c, _d, _e;
+    event.preventDefault();
+    var vehicleName = (_a = document.getElementById('vehicleName')) === null || _a === void 0 ? void 0 : _a.value;
+    var vehicleModel = (_b = document.getElementById('vehicleModel')) === null || _b === void 0 ? void 0 : _b.value;
+    var vehicleNumber = (_c = document.getElementById('vehicleNumber')) === null || _c === void 0 ? void 0 : _c.value;
+    var employeeId = (_d = document.getElementById('emplyeeId')) === null || _d === void 0 ? void 0 : _d.value;
+    var vehicleType = (_e = document.getElementById('vehicleType')) === null || _e === void 0 ? void 0 : _e.value;
+    if (!vehicleName || !vehicleModel || !vehicleNumber || !employeeId || !vehicleType) {
+        alert("Please fill out all fields before submitting.");
+        return;
+    }
+    var vehicleInfo = new Vehicle(vehicleType, vehicleName, vehicleModel, vehicleNumber, employeeId);
+    var price = showPricing();
+    console.log(price);
+    alert("\n    Vehicle Name: ".concat(vehicleInfo.vehicleName, "\n    Vehicle Model: ").concat(vehicleInfo.vehicleModel, "\n    Vehicle Number: ").concat(vehicleInfo.vehicleNumber, "\n    Employee ID: ").concat(vehicleInfo.employeeId, "\n    Vehicle Type: ").concat(vehicleInfo.vehicleType, "\n    Daily Charge: ").concat(price.daily, "\n    Monthly Charge: ").concat(price.monthly, "\n    Yearly Charge: ").concat(price.yearly, "\n    "));
     location.reload();
 };
 var showPricing = function () {
@@ -134,6 +174,7 @@ var isFieldValid = function (field) {
         return false;
     }
     if (inputElement.type === 'password' && !validatePassword(inputElement.value)) {
+        console.log("hsfd");
         return false;
     }
     return true;
@@ -147,5 +188,5 @@ var addcolour = function () {
     inputElement.classList.remove('myclass');
 };
 var validatePassword = function (password) {
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+    return /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/.test(password);
 };
